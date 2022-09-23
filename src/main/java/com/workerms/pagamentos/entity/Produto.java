@@ -23,12 +23,12 @@ import lombok.NoArgsConstructor;
 public class Produto implements Serializable {
 	private static final long serialVersionUID = 8774953817727299439L;
 
-	@Id	
+	@Id
 	private Long id;
-	
+
 	@Column(name = "estoque", length = 10, nullable = false)
 	private Integer estoque;
-	
+
 	public static Produto fromVendaVo(ProdutoVo produtoVo) {
 		return new ModelMapper().map(produtoVo, Produto.class);
 	}
